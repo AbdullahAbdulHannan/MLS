@@ -46,16 +46,16 @@ function Home() {
 {/* <StickyNavbar/> */}
       {/* Hero Section */}
       <section className="bg-cover bg-center  h-screen flex flex-col items-center justify-center p-4 sm:p-8 " style={{ backgroundImage: "url('/bg.webp')", backgroundRepeat:'no-repeat',backgroundSize:'cover',  backgroundPosition: '50% 50%' }}>
-        <div className="overlay absolute inset-0 flex flex-col items-center justify-center bg-black opacity-80 text-center text-white">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to MLS</h1>
+        <div className="overlay absolute inset-0 flex flex-col items-center justify-center bg-black opacity-80 text-center text-white " >
+          <h1 className="text-4xl md:text-6xl font-bold mb-4" data-aos='fade-right'>Welcome to MLS</h1>
           {/* <p className="text-lg md:text-2xl mb-6">Connecting the World Through Language</p> */}
-          <Slider slides={slides} currentSlide={currentSlide} />
-          <Link to={'/services'}><button className="bg-yellow-400 text-blue-900 font-bold px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-300 transition">Explore Our Services</button></Link>
+          <Slider slides={slides} currentSlide={currentSlide}  />
+          <Link to={'/services'}><button className="bg-yellow-400 text-blue-900 font-bold px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-300 transition" data-aos='fade-right'>Explore Our Services</button></Link>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-16 bg-gray-100 text-center">
+      <section className="py-16 bg-gray-100 text-center" data-aos='fade-up'>
   <div className="container mx-auto px-4">
     <h2 className="text-4xl font-extrabold text-gray-800 mb-8">Why Choose MLS?</h2>
     <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
@@ -104,7 +104,7 @@ function Home() {
 
 
       {/* Services Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white" data-aos='fade-up'>
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-10">Our Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -129,7 +129,7 @@ function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-16 bg-gray-100" data-aos='fade-up'>
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-10">What Our Clients Say</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -150,7 +150,7 @@ function Home() {
       </section>
 
       {/* Call-to-Action Section */}
-      <section className="py-16 bg-blue-900 text-white text-center">
+      <section className="py-16 bg-blue-900 text-white text-center" data-aos='fade-up'>
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6">Ready to Expand Your Reach?</h2>
           <p className="mb-6">Contact MLS today and let us help you connect with the world!</p>
