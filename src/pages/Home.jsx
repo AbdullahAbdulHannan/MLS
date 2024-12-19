@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { StickyNavbar } from './Navbar';
-import Slider from './Slides';
+import Slider from '../components/Slides';
 import { Link } from 'react-router-dom';
 
 function Home() {
@@ -57,43 +56,43 @@ function Home() {
       {/* About Section */}
       <section className="py-16 bg-gray-100 text-center" data-aos='fade-up'>
   <div className="container mx-auto px-4">
-    <h2 className="text-4xl font-extrabold text-gray-800 mb-8">Why Choose MLS?</h2>
+    <h2 className="text-4xl font-extrabold text-blue-900 mb-8">Why Choose MLS?</h2>
     <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
       At MLS, we specialize in interpretation and translation services that bridge cultural and linguistic gaps. Our mission is to empower communication and foster understanding in a globalized world.
     </p>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <div className="bg-white shadow-md rounded-lg p-6">
-        <h3 className="text-xl font-semibold text-gray-800 mb-4">Expert Linguists</h3>
+        <h3 className="text-xl font-semibold text-blue-900 mb-4">Expert Linguists</h3>
         <p className="text-gray-600">
           Our certified linguists and interpreters ensure accurate and culturally sensitive communication in over 100 languages.
         </p>
       </div>
       <div className="bg-white shadow-md rounded-lg p-6">
-        <h3 className="text-xl font-semibold text-gray-800 mb-4">Industry-Specific Solutions</h3>
+        <h3 className="text-xl font-semibold text-blue-900 mb-4">Industry-Specific Solutions</h3>
         <p className="text-gray-600">
           Tailored language solutions for legal, medical, business, and technology sectors to meet unique demands.
         </p>
       </div>
       <div className="bg-white shadow-md rounded-lg p-6">
-        <h3 className="text-xl font-semibold text-gray-800 mb-4">Cutting-Edge Technology</h3>
+        <h3 className="text-xl font-semibold text-blue-900 mb-4">Cutting-Edge Technology</h3>
         <p className="text-gray-600">
           Leveraging the latest tools and technologies to deliver high-quality services with unmatched precision and speed.
         </p>
       </div>
       <div className="bg-white shadow-md rounded-lg p-6">
-        <h3 className="text-xl font-semibold text-gray-800 mb-4">Global Reach</h3>
+        <h3 className="text-xl font-semibold text-blue-900 mb-4">Global Reach</h3>
         <p className="text-gray-600">
           Accessible anytime, anywhere, providing seamless communication through in-person or remote services.
         </p>
       </div>
       <div className="bg-white shadow-md rounded-lg p-6">
-        <h3 className="text-xl font-semibold text-gray-800 mb-4">Customer-Centric Approach</h3>
+        <h3 className="text-xl font-semibold text-blue-900 mb-4">Customer-Centric Approach</h3>
         <p className="text-gray-600">
           Personalized support and flexible solutions designed to help you achieve your goals efficiently.
         </p>
       </div>
       <div className="bg-white shadow-md rounded-lg p-6">
-        <h3 className="text-xl font-semibold text-gray-800 mb-4">Our Promise</h3>
+        <h3 className="text-xl font-semibold text-blue-900 mb-4">Our Promise</h3>
         <p className="text-gray-600">
           A trusted partner committed to breaking barriers and building bridges, one word at a time.
         </p>
@@ -106,18 +105,18 @@ function Home() {
       {/* Services Section */}
       <section className="py-16 bg-white" data-aos='fade-up'>
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-10">Our Services</h2>
+          <h2 className="text-3xl font-bold text-center mb-10 text-blue-900">Our Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="shadow-lg p-6 rounded-lg text-center">
-              <h3 className="text-xl font-bold mb-4">Interpretation</h3>
+              <h3 className="text-xl font-bold mb-4 text-blue-900">Interpretation</h3>
               <p className="text-gray-700">Professional interpretation for conferences, meetings, and more, ensuring clear and precise communication.</p>
             </div>
             <div className="shadow-lg p-6 rounded-lg text-center">
-              <h3 className="text-xl font-bold mb-4">Translation</h3>
+              <h3 className="text-xl font-bold mb-4 text-blue-900">Translation</h3>
               <p className="text-gray-700">High-quality translation services for documents, websites, and multimedia content.</p>
             </div>
             <div className="shadow-lg p-6 rounded-lg text-center">
-              <h3 className="text-xl font-bold mb-4">Localization</h3>
+              <h3 className="text-xl font-bold mb-4 text-blue-900">Localization</h3>
               <p className="text-gray-700">Adapting your content to align with the cultural and linguistic preferences of your target audience.</p>
             </div>
           </div>
@@ -131,19 +130,19 @@ function Home() {
       {/* Testimonials Section */}
       <section className="py-16 bg-gray-100" data-aos='fade-up'>
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-10">What Our Clients Say</h2>
+          <h2 className="text-3xl font-bold mb-10 text-blue-900">What Our Clients Say</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="p-6 bg-white shadow-lg rounded-lg">
               <p className="text-gray-700 italic">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores doloremque ea commodi, quia minus esse aspernatur, ab enim, iusto fugit perferendis laborum placeat corporis? Consequatur modi deserunt officiis illum totam?</p>
-              <h4 className="mt-4 font-bold">- ABC, CEO</h4>
+              <h4 className="mt-4 font-bold text-blue-900">- ABC, CEO</h4>
             </div>
             <div className="p-6 bg-white shadow-lg rounded-lg">
               <p className="text-gray-700 italic">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, quas! Cumque dicta necessitatibus hic repellendus nisi laudantium, asperiores numquam praesentium totam repellat corrupti itaque eius. Similique harum modi itaque nemo.</p>
-              <h4 className="mt-4 font-bold">- ABC, Marketing Head</h4>
+              <h4 className="mt-4 font-bold text-blue-900">- ABC, Marketing Head</h4>
             </div>
             <div className="p-6 bg-white shadow-lg rounded-lg">
               <p className="text-gray-700 italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro corrupti ipsa repellat ab quos saepe sit. At qui, sint saepe incidunt sequi quidem tempora cumque sunt cum facilis architecto reiciendis?</p>
-              <h4 className="mt-4 font-bold">- ABC, Product Manager</h4>
+              <h4 className="mt-4 font-bold text-blue-900">- ABC, Product Manager</h4>
             </div>
           </div>
         </div>

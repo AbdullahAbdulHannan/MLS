@@ -1,11 +1,11 @@
 import React from "react";
-import { BsFacebook, BsGithub, BsTwitter } from "react-icons/bs";
+import { BsFacebook,  BsTwitter } from "react-icons/bs";
 import { GrLinkedin } from "react-icons/gr";
-import { Link, useLocation } from "react-router-dom";
 import { IoIosMail } from "react-icons/io";
-import { SiWhatsapp } from "react-icons/si";
+import { MdPhone } from "react-icons/md";
 import { IconContext } from "react-icons";
 import { FaLocationDot } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
 //   const {pathname}=useLocation()
@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-blue-900 overflow-hidden">
-        <div className="md:grid md:grid-cols-3 gap-16 mx-5 md:mx-20  md:mb-10  ">
+        <div className="md:grid md:grid-cols-3 gap-16 mx-5 md:mx-20  md:mb-10 mt-5 ">
           <div className=" md:ms-5 md:me-10 md:mt-5">
             <h3 className=" text-3xl text-blue-100">MLS</h3>
             <p className=" text-white mt-5">
@@ -26,34 +26,33 @@ const Footer = () => {
           </div>
           <div className=" md:ms-5 md:me-10 mt-5">
             <h3 className=" text-3xl text-blue-100">Useful Links</h3>
-            <ul className=" text-white text-xl mt-5">
+            <ul className=" text-white text-lg mt-5">
             
               <li className=" hover:text-yellow-500 hover:underline mb-2 cursor-pointer">
-              <a href="/contact" style={{textDecoration:'none'}}>
-  About
-</a>
+              <Link to={"/"}>Home</Link>
               </li>
               <li className=" hover:text-yellow-500 hover:underline mb-2 cursor-pointer">
-              <a href="/services"  style={{textDecoration:'none'}}>
-  Work
-</a>
+              <Link to={"/services"}>Our Services</Link>
               </li>
               <li className=" hover:text-yellow-500 hover:underline mb-2 cursor-pointer">
-                <a href="/home">Why Choose mls?</a>
+              <Link to={"/career"}>Career Oppurtunities</Link>
+              </li>
+              <li className=" hover:text-yellow-500 hover:underline mb-2 cursor-pointer">
+              <Link to={"/contact"}>Contact Us</Link>
               </li>
             </ul>
           </div>
           <div className=" md:ms-5 md:me-10 mt-5">
             <h3 className=" text-3xl text-blue-100"> Connect </h3>
-            <ul className=" text-white text-xl mt-5 leading-tight">
-              {/* <a href="https://wa.me/923311351274">
+            <ul className=" text-white text-lg mt-5 leading-tight">
+              <a href="https://wa.me/92345345345">
                 <li className=" hover:text-yellow-500 mb-4 flex">
-                  <SiWhatsapp className="me-2 text-yellow-500" />
-                  +923311351274
+                  <MdPhone className="me-2 text-white-500" />
+                  +92 123 456789
                 </li>
-              </a> */}
+              </a>
               <a href={mailtoLink} target="_blank">
-                <li className=" mb-4 flex text-sm">
+                <li className=" mb-4 flex ">
                   <IconContext.Provider
                     value={{ color: "white", size: "25px" }}
                   >

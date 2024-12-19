@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react'
-import Home from './components/Home'
+import Home from './pages/Home'
 import Footer from './components/Footer'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Services from './components/Services'
-import Contact from './components/Contact'
-import Career from './components/Career'
+import Services from './pages/Services'
+import Contact from './pages/Contact'
+import Career from './pages/Career'
 import { StickyNavbar } from './components/Navbar'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ScrollRestore from './components/ScrollRestore'
 const App = () => {
   useEffect(() => {
     AOS.init();
@@ -16,6 +17,7 @@ const App = () => {
     <>
    
     <BrowserRouter>
+    <ScrollRestore/>
 <StickyNavbar/>
     <Routes>
     <Route
