@@ -1,5 +1,7 @@
 // import { Button } from "@/components/ui/button";
 
+import { Link } from "react-router-dom";
+
 export function CTASection() {
   return (
     <section className="py-16 px-6 bg-blue-900 text-primary-foreground" data-aos="fade-up">
@@ -8,9 +10,11 @@ export function CTASection() {
         <p className="mb-8 text-white max-w-2xl mx-auto">
           Contact us today to learn more about our interpretation services and how we can help you communicate effectively across languages.
         </p>
-        <button className="bg-yellow-400 text-blue-900 font-bold px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-300">
+     <Link to={'/contact'}>
+       <button className="bg-yellow-400 text-blue-900 font-bold px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-300">
           Contact Now!
         </button>
+     </Link> 
       </div>
     </section>
   );
