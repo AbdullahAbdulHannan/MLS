@@ -9,7 +9,8 @@ import { StickyNavbar } from './components/Navbar'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ScrollRestore from './components/ScrollRestore'
-import { AdminCareerPage } from './pages/AdminCareer'
+import AdminCareerPage from './pages/AdminCareer'
+
 const App = () => {
   useEffect(() => {
     AOS.init();
