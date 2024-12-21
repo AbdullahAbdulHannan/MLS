@@ -2,7 +2,7 @@ import { useState } from "react";
 import { LoginForm } from "../components/admin/LoginForm";
 import { JobManagement } from "../components/admin/JobManagement";
 
-const AdminCareerPage=()=> {
+const AdminCareer=()=> {
   const [isAuth, setIsAuth] = useState(false);
 
   return (
@@ -19,4 +19,4 @@ const AdminCareerPage=()=> {
     </div>
   );
 }
-export default AdminCareerPage
+export default AdminCareer
