@@ -63,9 +63,9 @@ const Footer = () => {
                   mls@gmail.com
                 </li>
               </a>
-              <li className=" hover:text-yellow-500 mb-4 flex">
-                <FaLocationDot className=" text-white me-2" />
-                Pakistan
+              <li className=" mb-4 flex text-md">
+                <FaLocationDot className=" text-white w-24" />
+                14 Wheelers Close, Nazeing, Waltham Abbey, England, EN9 2RA
               </li>
             </ul>
 

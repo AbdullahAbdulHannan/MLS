@@ -5,8 +5,12 @@ import { Textarea } from "../ui/textarea";
 import { Card } from "../ui/card";
 import { Select, Option } from "@material-tailwind/react";
 import { useState } from "react";
-
+import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export function ContactForm() {
+  const [isLoad, setIsLoad] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -14,16 +18,31 @@ export function ContactForm() {
     reset,
     formState: { errors },
   } = useForm();
-const[isLoad,setIsLoad]=useState(false)
-  const onSubmit = (data) => {
-    setIsLoad(true)
-    console.log("Form Data Submitted:", data);
-    // Add your logic to save or send the form data
-    setIsLoad(false)
-    
-    alert("Form submitted successfully!");
-    
-    reset()
+
+  const sendEmail = (data) => {
+    setIsLoad(true);
+
+    emailjs
+      .send(
+        "service_uonfc3o", // Replace with your EmailJS service ID
+        "template_jevjyxs", // Replace with your EmailJS template ID
+        data,
+        "BbK90qeOjOYAilmKA" // Replace with your EmailJS public key
+      )
+      .then(
+        () => {
+          setIsLoad(false);
+          toast.success(
+            "Thank you for messaging us!\nYour message has been submitted, and we will respond to you soon."
+          );
+          reset(); // Reset the form after submission
+        },
+        (error) => {
+          setIsLoad(false);
+          console.error("Failed to send email:", error);
+          toast.error("Failed to send your message. Please try again later.");
+        }
+      );
   };
 
   return (
@@ -31,12 +50,13 @@ const[isLoad,setIsLoad]=useState(false)
       <div className="max-w-3xl mx-auto">
         <Card className="p-6 sm:p-8 !shadow-2xl !shadow-blue-gray-200">
           <h2 className="text-2xl font-semibold text-center text-blue-900 mb-6">Contact Us</h2>
-          <form className="space-y-8" onSubmit={handleSubmit(onSubmit)}>
+          <form className="space-y-8" onSubmit={handleSubmit(sendEmail)}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <Label htmlFor="firstName">First Name</Label>
                 <Input
                   id="firstName"
+                  name="firstName"
                   placeholder="First Name"
                   {...register("firstName", { required: "First name is required" })}
                 />
@@ -48,6 +68,7 @@ const[isLoad,setIsLoad]=useState(false)
                 <Label htmlFor="lastName">Last Name</Label>
                 <Input
                   id="lastName"
+                  name="lastName"
                   placeholder="Last Name"
                   {...register("lastName", { required: "Last name is required" })}
                 />
@@ -143,11 +164,12 @@ const[isLoad,setIsLoad]=useState(false)
               type="submit"
               className="w-full py-3 text-white bg-blue-900 hover:bg-blue-700 rounded-lg text-lg font-medium transition duration-300"
             >
-              {isLoad?'Sending....':'Send Message'}
+              {isLoad ? "Sending..." : "Send Message"}
             </button>
           </form>
         </Card>
       </div>
+      <ToastContainer/>
     </section>
   );
 }

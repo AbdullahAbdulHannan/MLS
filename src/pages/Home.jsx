@@ -113,7 +113,7 @@ function Home() {
             </div>
             <div className="shadow-lg p-6 rounded-lg text-center">
               <h3 className="text-xl font-bold mb-4 text-blue-900">Translation</h3>
-              <p className="text-gray-700">High-quality translation services for documents, websites, and multimedia content.</p>
+              <p className="text-gray-700">High-quality translation services for documents, and multimedia content.</p>
             </div>
             <div className="shadow-lg p-6 rounded-lg text-center">
               <h3 className="text-xl font-bold mb-4 text-blue-900">Localization</h3>
@@ -128,7 +128,7 @@ function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-gray-100" data-aos='fade-up'>
+      {/* <section className="py-16 bg-gray-100" data-aos='fade-up'>
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-10 text-blue-900">What Our Clients Say</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -146,7 +146,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Call-to-Action Section */}
       <section className="py-16 bg-blue-900 text-white text-center" data-aos='fade-up'>
