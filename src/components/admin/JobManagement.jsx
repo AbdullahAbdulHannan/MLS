@@ -10,6 +10,7 @@ export function JobManagement() {
 
   const handleAddJob = (job) => {
     setJobs((prev) => [...prev, job]);
+    setIsModalOpen(false)
   };
 
   const handleDeleteJob = (id) => {

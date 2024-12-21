@@ -33,7 +33,7 @@ export function JobList() {
 
       if (response.ok) {
         // Update state to remove the deleted job
-        setJobs((prevJobs) => prevJobs.filter((job) => job.id !== id));
+        setJobs((prevJobs) => prevJobs.filter((job) => job._id !== id));
         console.log(`Job with ID ${id} deleted successfully`);
       } else {
         console.error("Failed to delete job:", response.statusText);
