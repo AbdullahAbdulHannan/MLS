@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
 //   const {pathname}=useLocation()
-  const email = "abcd@gmail.com";
+  const email = "mls@gmail.com";
 
   const mailtoLink = `mailto:${email}`;
   return (
@@ -45,11 +45,13 @@ const Footer = () => {
           <div className=" md:ms-5 md:me-10 mt-5">
             <h3 className=" text-3xl text-blue-100"> Connect </h3>
             <ul className=" text-white text-lg mt-5 leading-tight">
-              
+              <a href="tel:+447443132008" target="_blank">
+
                 <li className=" hover:text-yellow-500 mb-4 flex">
                   <MdPhone className="me-2 text-white-500" />
-                  07443132008
+                  +447443132008
                 </li>
+              </a>
              
               <a href={mailtoLink} target="_blank">
                 <li className=" mb-4 flex ">
@@ -60,10 +62,10 @@ const Footer = () => {
                       <IoIosMail />
                     </div>
                   </IconContext.Provider>
-                  mls@gmail.com
+                  {email}
                 </li>
               </a>
-              <li className=" mb-4 flex text-md">
+              <li className=" mb-4 flex text-md md:ms-0 sm:-ms-5">
                 <FaLocationDot className=" text-white w-24" />
                 14 Wheelers Close, Nazeing, Waltham Abbey, England, EN9 2RA
               </li>
