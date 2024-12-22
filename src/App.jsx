@@ -24,27 +24,26 @@ const App = () => {
 <StickyNavbar/>
     <Routes>
     <Route
-            exact
+             
             path="/"
             element={<Home />}
           />
     <Route
-            exact
+             
             path="/services"
             element={<Services />}
           />
     <Route
-            exact
+             
             path="/contact"
             element={<Contact />}
           />
     <Route
-            exact
+             
             path="/career"
             element={<Career />}
           />
     <Route
-            exact
             path="/admin-career"
             element={<AdminCareer />}
           />
