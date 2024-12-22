@@ -45,7 +45,7 @@ const App = () => {
           />
     <Route
             exact
-            path="/admincareer"
+            path="/admin-career"
             element={<AdminCareer />}
           />
     
