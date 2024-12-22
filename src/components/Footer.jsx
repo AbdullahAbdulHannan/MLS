@@ -45,12 +45,12 @@ const Footer = () => {
           <div className=" md:ms-5 md:me-10 mt-5">
             <h3 className=" text-3xl text-blue-100"> Connect </h3>
             <ul className=" text-white text-lg mt-5 leading-tight">
-              <a href="https://wa.me/92345345345">
+              
                 <li className=" hover:text-yellow-500 mb-4 flex">
                   <MdPhone className="me-2 text-white-500" />
-                  +92 123 456789
+                  07443132008
                 </li>
-              </a>
+             
               <a href={mailtoLink} target="_blank">
                 <li className=" mb-4 flex ">
                   <IconContext.Provider
