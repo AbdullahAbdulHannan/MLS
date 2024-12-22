@@ -9,7 +9,8 @@ import {
   DialogHeader,
   DialogTitle,
 } from "../ui/dialog";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export function JobPostModal({ open, onOpenChange, onSubmit }) {
   const [formData, setFormData] = useState({
     title: "",
@@ -53,11 +54,17 @@ export function JobPostModal({ open, onOpenChange, onSubmit }) {
         const result = await response.json();
         console.log("Job posted successfully:", result);
         onSubmit(result); // Trigger callback with the result
-        onOpenChange(false); // Close the modal
+        onOpenChange(false); 
+        localStorage.setItem("isAuth", "true");
+toast.success('Job added Successfully!')
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000);
       } else {
         console.error("Failed to post job:", response.statusText);
         const error = await response.json();
         console.error("Error details:", error);
+        toast.error('Failed to post job!')
       }
     } catch (error) {
       console.error("Error posting job:", error);
@@ -148,6 +155,7 @@ export function JobPostModal({ open, onOpenChange, onSubmit }) {
           </button>
         </form>
       </DialogContent>
+      <ToastContainer autoClose={1500} />
     </Dialog>
   );
 }

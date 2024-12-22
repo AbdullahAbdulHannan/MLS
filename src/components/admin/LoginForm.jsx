@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Input } from "../ui/input";
 import { Card } from "../ui/card";
+import {FadeLoader} from "react-spinners"
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -31,8 +32,15 @@ export function LoginForm({ setIsAuth }) {
   return (
     <>
     {loading?
-    <p>Loading....</p>
-    :<Card className="w-full max-w-md p-6 space-y-4 mt-[10%]">
+    <p><FadeLoader
+  color="#2e64b5"
+  height={20}
+  margin={2}
+  speedMultiplier={2}
+  width={6}
+/></p>
+    :
+    <Card className="w-full max-w-md p-6 space-y-4 mt-[10%]">
     
       <h2 className="text-2xl font-bold text-center text-blue-900">Admin Login</h2>
       <form className="space-y-4" onSubmit={handleSubmit}>

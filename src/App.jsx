@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Home from './pages/Home'
 import Footer from './components/Footer'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
@@ -13,8 +13,13 @@ import AdminCareer from './pages/AdminCareer'
 
 
 const App = () => {
+   const [isAuth, setIsAuth] = useState(false);
   useEffect(() => {
     AOS.init();
+    const authStatus = localStorage.getItem("isAuth");
+    if (authStatus === "true") {
+      setIsAuth(true);
+    }
   }, []);
   return (
     <>
@@ -45,7 +50,7 @@ const App = () => {
           />
     <Route
             path="/admin-career"
-            element={<AdminCareer />}
+            element= {<AdminCareer auth={isAuth} setIsAuth={setIsAuth}/>}
           />
     
     </Routes>
