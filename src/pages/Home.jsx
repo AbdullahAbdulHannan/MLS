@@ -28,30 +28,34 @@ function Home() {
   }, [currentSlide, slides.length]);
   return (
     <div className="font-sans">
-      {/* Header */}
-      {/* <header className="bg-blue-900 text-white py-4 shadow-md">
-        <div className="container mx-auto flex justify-between items-center px-4">
-          <h1 className="text-2xl font-bold">MLS</h1>
-          <nav>
-            <ul className="flex space-x-6">
-              <li><a href="#" className="hover:text-yellow-400">Home</a></li>
-              <li><a href="#" className="hover:text-yellow-400">About</a></li>
-              <li><a href="#" className="hover:text-yellow-400">Services</a></li>
-              <li><a href="#" className="hover:text-yellow-400">Career</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header> */}
-{/* <StickyNavbar/> */}
       {/* Hero Section */}
-      <section className="bg-cover bg-center  h-screen flex flex-col items-center justify-center p-4 sm:p-8 " style={{ backgroundImage: "url('/bg.webp')", backgroundRepeat:'no-repeat',backgroundSize:'cover',  backgroundPosition: '50% 50%' }}>
-        <div className="overlay absolute inset-0 flex flex-col items-center justify-center bg-black opacity-80 text-center text-white " >
-          <h1 className="text-4xl md:text-6xl font-bold mb-4" data-aos='fade-right'>Welcome to MLS</h1>
-          {/* <p className="text-lg md:text-2xl mb-6">Connecting the World Through Language</p> */}
-          <Slider slides={slides} currentSlide={currentSlide}  />
-          <Link to={'/services'}><button className="bg-yellow-400 text-blue-900 font-bold px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-300 transition" data-aos='fade-right'>Explore Our Services</button></Link>
-        </div>
-      </section>
+      <section
+  className="relative bg-cover bg-center h-screen flex flex-col items-center justify-center p-4 sm:p-8"
+  style={{
+    backgroundImage: "url('/bg.webp')",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "50% 50%",
+  }}
+>
+  <div
+    className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-80 text-center text-white"
+  >
+    <h1 className="text-4xl md:text-6xl font-bold mb-4" data-aos="fade-right">
+      Welcome to MLS
+    </h1>
+    <Slider slides={slides} currentSlide={currentSlide} />
+    <Link to={"/services"}>
+      <button
+        className="bg-yellow-400 text-blue-900 font-bold px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-300 transition"
+        data-aos="fade-right"
+      >
+        Explore Our Services
+      </button>
+    </Link>
+  </div>
+</section>
+
 
       {/* About Section */}
       <section className="py-16 bg-gray-100 text-center" data-aos='fade-up'>
@@ -127,26 +131,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      {/* <section className="py-16 bg-gray-100" data-aos='fade-up'>
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-10 text-blue-900">What Our Clients Say</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="p-6 bg-white shadow-lg rounded-lg">
-              <p className="text-gray-700 italic">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores doloremque ea commodi, quia minus esse aspernatur, ab enim, iusto fugit perferendis laborum placeat corporis? Consequatur modi deserunt officiis illum totam?</p>
-              <h4 className="mt-4 font-bold text-blue-900">- ABC, CEO</h4>
-            </div>
-            <div className="p-6 bg-white shadow-lg rounded-lg">
-              <p className="text-gray-700 italic">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, quas! Cumque dicta necessitatibus hic repellendus nisi laudantium, asperiores numquam praesentium totam repellat corrupti itaque eius. Similique harum modi itaque nemo.</p>
-              <h4 className="mt-4 font-bold text-blue-900">- ABC, Marketing Head</h4>
-            </div>
-            <div className="p-6 bg-white shadow-lg rounded-lg">
-              <p className="text-gray-700 italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro corrupti ipsa repellat ab quos saepe sit. At qui, sint saepe incidunt sequi quidem tempora cumque sunt cum facilis architecto reiciendis?</p>
-              <h4 className="mt-4 font-bold text-blue-900">- ABC, Product Manager</h4>
-            </div>
-          </div>
-        </div>
-      </section> */}
+     
 
       {/* Call-to-Action Section */}
       <section className="py-16 bg-blue-900 text-white text-center" data-aos='fade-up'>
@@ -156,13 +141,6 @@ function Home() {
          <Link to={'/contact'}> <button className="bg-yellow-400 text-blue-900 font-bold px-8 py-3 rounded-lg shadow-lg hover:bg-yellow-300 transition">Contact Now!</button></Link>
         </div>
       </section>
-
-      {/* Footer */}
-      {/* <footer className="bg-blue-900 text-white py-6">
-        <div className="container mx-auto text-center px-4">
-          <p>&copy; 2024 MLS - Multinational Language Services | All Rights Reserved</p>
-        </div>
-      </footer> */}
     </div>
   );
 }
