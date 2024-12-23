@@ -20,7 +20,7 @@ const DialogContent = ({ className, children, ...props }) => {
         "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%]  gap-4 border bg-white p-6 shadow-lg sm:rounded-lg",
        
         "max-h-[60vh] translate-y-[-70%] overflow-y-scroll", 
-        "md:max-h-screen md:translate-y-[-50%]", 
+        "md:max-h-screen sm:max-h-[85vh] sm:translate-y-[-50%]", 
         "touch-auto", 
         "pb-20 md:pb-6",
         className
