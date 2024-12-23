@@ -30,7 +30,7 @@ const DialogContent = ({ className, children, ...props }) => {
       className={cn(
         "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-white p-6 shadow-lg sm:rounded-lg",
         // Mobile-specific styles
-        isKeyboardOpen?"max-h-[80vh]":'',
+        isKeyboardOpen?"max-h-[80vh] bg-red-300":'',
         "max-h-[95vh] overflow-y-auto", 
         "md:max-h-screen", 
         "touch-auto", 
