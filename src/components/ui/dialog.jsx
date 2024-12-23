@@ -5,7 +5,21 @@ import { cn } from "../lib/utils";
 
 const Dialog = DialogPrimitive.Root;
 
-const DialogContent = ({ className, children, ...props }) => (
+const DialogContent = ({ className, children, ...props }) => {
+  const [isKeyboardOpen, setIsKeyboardOpen] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      // Check if the viewport height has reduced significantly
+      const isKeyboardVisible = window.innerHeight < screen.height * 0.75; // Adjust threshold as needed
+      setIsKeyboardOpen(isKeyboardVisible);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Initial check
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return(
   <DialogPrimitive.Portal>
     <DialogPrimitive.Overlay
       className={cn(
@@ -16,8 +30,8 @@ const DialogContent = ({ className, children, ...props }) => (
       className={cn(
         "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-white p-6 shadow-lg sm:rounded-lg",
         // Mobile-specific styles
-        "max-h-[50vh] overflow-y-auto", 
-        "md:max-h-[85vh]", 
+        "max-h-[95vh] overflow-y-auto", 
+        "md:max-h-screen", 
         "touch-auto", 
         "pb-20 md:pb-6",
         className
@@ -33,7 +47,7 @@ const DialogContent = ({ className, children, ...props }) => (
       </DialogPrimitive.Close>
     </DialogPrimitive.Content>
   </DialogPrimitive.Portal>
-);
+)};
 
 const DialogHeader = ({ className, ...props }) => (
   <div className={cn("flex flex-col space-y-1.5 text-center sm:text-left", className)} {...props} />
