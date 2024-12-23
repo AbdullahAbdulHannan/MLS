@@ -2,12 +2,11 @@ import * as React from "react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { Cross2Icon } from "@radix-ui/react-icons";
 import { cn } from "../lib/utils";
-import useDetectKeyboardOpen from "use-detect-keyboard-open";
 const Dialog = DialogPrimitive.Root;
 
 const DialogContent = ({ className, children, ...props }) => {
 
-  const isKeyboardOpen = useDetectKeyboardOpen(500);
+ 
   
   return(
   <DialogPrimitive.Portal>
@@ -18,11 +17,10 @@ const DialogContent = ({ className, children, ...props }) => {
     />
     <DialogPrimitive.Content
       className={cn(
-        "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-white p-6 shadow-lg sm:rounded-lg",
-        // Mobile-specific styles
-        isKeyboardOpen?"translate-y-[-70%] ":"max-h-[95vh]",
-        "max-h-[60vh] overflow-y-scroll", 
-        "md:max-h-screen", 
+        "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%]  gap-4 border bg-white p-6 shadow-lg sm:rounded-lg",
+       
+        "max-h-[60vh] translate-y-[-70%] overflow-y-scroll", 
+        "md:max-h-screen md:translate-y-[-50%]", 
         "touch-auto", 
         "pb-20 md:pb-6",
         className
