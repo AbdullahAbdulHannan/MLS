@@ -7,7 +7,7 @@ const Dialog = DialogPrimitive.Root;
 
 const DialogContent = ({ className, children, ...props }) => {
 
-  const isKeyboardOpen = useDetectKeyboardOpen(null,500);
+  const isKeyboardOpen = useDetectKeyboardOpen(500);
   
   return(
   <DialogPrimitive.Portal>
