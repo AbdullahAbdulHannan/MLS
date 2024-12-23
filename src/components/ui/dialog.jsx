@@ -11,7 +11,7 @@ const DialogContent = ({ className, children, ...props }) => {
   React.useEffect(() => {
     const handleResize = () => {
       // Check if the viewport height has reduced significantly
-      const isKeyboardVisible = window.innerHeight < screen.height * 0.75; // Adjust threshold as needed
+      const isKeyboardVisible = window.innerHeight < screen.height *1; // Adjust threshold as needed
       setIsKeyboardOpen(isKeyboardVisible);
     };
 
