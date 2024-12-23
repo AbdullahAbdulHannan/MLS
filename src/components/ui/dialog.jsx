@@ -2,23 +2,13 @@ import * as React from "react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { Cross2Icon } from "@radix-ui/react-icons";
 import { cn } from "../lib/utils";
-
+import useDetectKeyboardOpen from "use-detect-keyboard-open";
 const Dialog = DialogPrimitive.Root;
 
 const DialogContent = ({ className, children, ...props }) => {
-  const [isKeyboardOpen, setIsKeyboardOpen] = React.useState(false);
 
-  React.useEffect(() => {
-    const handleResize = () => {
-      // Check if the viewport height has reduced significantly
-      const isKeyboardVisible = window.innerHeight < screen.height *0.80; // Adjust threshold as needed
-      setIsKeyboardOpen(isKeyboardVisible);
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize(); // Initial check
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isKeyboardOpen = useDetectKeyboardOpen();
+  
   return(
   <DialogPrimitive.Portal>
     <DialogPrimitive.Overlay
@@ -30,7 +20,7 @@ const DialogContent = ({ className, children, ...props }) => {
       className={cn(
         "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-white p-6 shadow-lg sm:rounded-lg",
         // Mobile-specific styles
-        isKeyboardOpen?"max-h-[80vh] top-[50%]":"max-h-[95vh]",
+        isKeyboardOpen?"max-h-[80vh] top-[50%] ":"max-h-[95vh]",
         " overflow-y-scroll", 
         "md:max-h-screen", 
         "touch-auto", 
