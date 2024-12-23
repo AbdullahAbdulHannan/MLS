@@ -50,7 +50,7 @@ export function JobApplicationModal({ job, open, onOpenChange }) {
           "template_8ubte72", // Replace with your EmailJS template ID
           {
             ...data,
-            jobTitle: job.title,
+            jobTitle: job.positionTitle,
             cvLink: link, // Include the File.io link
           },
           "BbK90qeOjOYAilmKA" // Replace with your EmailJS public key
@@ -75,7 +75,7 @@ export function JobApplicationModal({ job, open, onOpenChange }) {
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-2xl">
         <DialogHeader>
-          <DialogTitle>Apply for {job?.title || "this job"}</DialogTitle>
+          <DialogTitle>Apply for {job?.positionTitle || "this job"}</DialogTitle>
         </DialogHeader>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
