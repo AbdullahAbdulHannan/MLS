@@ -65,7 +65,7 @@ const Footer = () => {
                   {email}
                 </li>
               </a>
-              <li className=" mb-4 flex text-md md:ms-0 sm:-ms-5">
+              <li className=" mb-4 flex text-md md:ms-0" style={{marginLeft:'-15px'}}>
                 <FaLocationDot className=" text-white w-24" />
                 14 Wheelers Close, Nazeing, Waltham Abbey, England, EN9 2RA
               </li>

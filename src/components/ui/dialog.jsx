@@ -14,13 +14,20 @@ const DialogContent = ({ className, children, ...props }) => (
     />
     <DialogPrimitive.Content
       className={cn(
-        "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-white p-6 shadow-lg sm:rounded-lg","max-h-screen overflow-y-auto",
+        "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-white p-6 shadow-lg sm:rounded-lg",
+        // Mobile-specific styles
+        "max-h-[90vh] overflow-y-auto", 
+        "md:max-h-[85vh]", 
+        "touch-auto", 
+        "pb-20 md:pb-6",
         className
       )}
       {...props}
     >
       {children}
-      <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100">
+      <DialogPrimitive.Close 
+        className="absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
         <Cross2Icon className="h-8 w-8 text-red-900" />
         <span className="sr-only">Close</span>
       </DialogPrimitive.Close>
