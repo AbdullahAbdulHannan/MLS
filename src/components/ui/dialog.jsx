@@ -14,17 +14,17 @@ const DialogContent = ({ className, children, ...props }) => (
     />
     <DialogPrimitive.Content
       className={cn(
-        "fixed inset-0 z-50 bg-white p-6",
-        "md:left-[50%] md:top-[50%] md:translate-x-[-50%] md:translate-y-[-50%]",
-        "md:h-auto md:max-h-[85vh] md:w-full md:max-w-lg md:rounded-lg",
-        "flex flex-col",
+        "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-white p-6 shadow-lg sm:rounded-lg",
+        // Mobile-specific styles
+        "max-h-[50vh] overflow-y-auto", 
+        "md:max-h-[85vh]", 
+        "touch-auto", 
+        "pb-20 md:pb-6",
         className
       )}
       {...props}
     >
-      <div className="overflow-y-auto flex-1 -mx-6 px-6">
-        {children}
-      </div>
+      {children}
       <DialogPrimitive.Close 
         className="absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
