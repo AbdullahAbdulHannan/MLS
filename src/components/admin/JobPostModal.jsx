@@ -55,7 +55,6 @@ export function JobPostModal({ open, onOpenChange, onSubmit }) {
         console.log("Job posted successfully:", result);
         onSubmit(result); // Trigger callback with the result
         onOpenChange(false); 
-        localStorage.setItem("isAuth", "true");
 toast.success('Job added Successfully!')
         setTimeout(() => {
           window.location.reload();

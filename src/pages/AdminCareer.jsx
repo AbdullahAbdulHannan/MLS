@@ -10,7 +10,7 @@ const AdminCareer = ({ auth, setIsAuth }) => {
             <LoginForm setIsAuth={setIsAuth} />
           </div>
         ) : (
-          <JobManagement />
+          <JobManagement setIsAuth={setIsAuth}/>
         )}
       </div>
     </div>
