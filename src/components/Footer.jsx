@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
 //   const {pathname}=useLocation()
-  const email = "mls@gmail.com";
+  const email = "khalidahmadzai@multinationallanguage.services";
 
   const mailtoLink = `mailto:${email}`;
   return (
@@ -42,32 +42,37 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className=" md:ms-5 md:me-10 mt-5">
+          <div className=" md:-ms-8 md:me-10 mt-5">
             <h3 className=" text-3xl text-blue-100"> Connect </h3>
-            <ul className=" text-white text-lg mt-5 leading-tight">
-              <a href="tel:+447443132008" target="_blank">
+            <ul className="text-white space-y-4 mt-5">
+              {/* Phone */}
+              <li>
+                <a 
+                  href="tel:+447443132008" 
+                  className="flex items-center hover:text-yellow-500 transition-colors duration-200"
+                >
+                  <MdPhone className="flex-shrink-0 mr-2 text-xl" />
+                  <span>+447443132008</span>
+                </a>
+              </li>
 
-                <li className=" hover:text-yellow-500 mb-4 flex">
-                  <MdPhone className="me-2 text-white-500" />
-                  +447443132008
-                </li>
-              </a>
-             
-              <a href={mailtoLink} target="_blank">
-                <li className=" mb-4 flex ">
-                  <IconContext.Provider
-                    value={{ color: "white", size: "25px" }}
-                  >
-                    <div className=" me-2 ">
-                      <IoIosMail />
-                    </div>
-                  </IconContext.Provider>
-                  {email}
-                </li>
-              </a>
-              <li className=" mb-4 flex text-md md:ms-0" style={{marginLeft:'-15px'}}>
-                <FaLocationDot className=" text-white w-24" />
-                14 Wheelers Close, Nazeing, Waltham Abbey, England, EN9 2RA
+              {/* Email */}
+              <li>
+                <a 
+                  href={mailtoLink}
+                  className="group flex items-start hover:text-yellow-500 transition-colors duration-200"
+                >
+                  <IoIosMail className="flex-shrink-0 mr-2 text-xl mt-1" />
+                  <span className="break-all">{email}</span>
+                </a>
+              </li>
+
+              {/* Address */}
+              <li className="flex items-start">
+                <FaLocationDot className="flex-shrink-0 mr-2 text-xl mt-1" />
+                <span className="break-words">
+                  14 Wheelers Close, Nazeing, Waltham Abbey, England, EN9 2RA
+                </span>
               </li>
             </ul>
 
