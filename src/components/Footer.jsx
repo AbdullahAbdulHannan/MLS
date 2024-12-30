@@ -77,7 +77,7 @@ const Footer = () => {
             </ul>
 
             <div className=" text-2xl flex md:mt-10 text-white mb-3">
-            <a href="https://facebook.com/" target="_blank">
+            <a href="https://facebook.com/" target="_blank" aria-label="Facebook">
               <div className="md:me-10 me-3 hover:text-blue-300 hover:bg-yellow-500 hover:border-black border rounded-full border-slate-500 bg-slate-500 p-3 ">
                 <BsFacebook />
               </div>
@@ -85,12 +85,13 @@ const Footer = () => {
               <a
                 href="https://linkedin.com/"
                 target="_blank"
+               aria-label="Linkedin"
               >
                 <div className="md:me-10 me-3 hover:text-blue-900 hover:bg-yellow-500 hover:border-black border rounded-full border-slate-500 bg-slate-500 p-3 ">
                   <GrLinkedin />
                 </div>
               </a>
-              <a href="https://twitter.com/" target="_blank">
+              <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
                 <div className="md:me-10 me-3 hover:text-blue-500 hover:bg-yellow-500 hover:border-black border rounded-full border-slate-500 bg-slate-500 p-3 ">
                   <BsTwitter />
                 </div>
