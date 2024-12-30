@@ -100,6 +100,7 @@ export function StickyNavbar() {
               variant="text"
               className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
               ripple={false}
+              aria-label="open-menu"
               onClick={() => setOpenNav(!openNav)}
             >
               {openNav ? (
