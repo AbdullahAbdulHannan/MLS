@@ -121,6 +121,7 @@ export function ContactForm() {
               <Select
                 color="blue"
                 label="Select Service"
+                aria-label="services"
                 onChange={(value) => setValue("service", value, { shouldValidate: true })}
               >
                 <Option value="opi">Over the Phone Interpretation (OPI)</Option>
@@ -136,6 +137,7 @@ export function ContactForm() {
               <Select
                 color="blue"
                 label="Select Language"
+                aria-label="languages"
                 onChange={(value) => setValue("language", value, { shouldValidate: true })}
               >
                 <Option value="english">English</Option>

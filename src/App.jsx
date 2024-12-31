@@ -1,16 +1,18 @@
-import React, { useEffect, useState } from 'react'
-import Home from './pages/Home'
+import React, { Suspense, useEffect, useState } from 'react'
+
 import Footer from './components/Footer'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Services from './pages/Services'
-import Contact from './pages/Contact'
-import Career from './pages/Career'
+
 import { StickyNavbar } from './components/Navbar'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ScrollRestore from './components/ScrollRestore'
-import AdminCareer from './pages/AdminCareer'
-import NotFoundPage  from './pages/NotFoundPage'
+const Home = React.lazy(() => import('./pages/Home'));
+const Services = React.lazy(() => import('./pages/Services'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+const Career = React.lazy(() => import('./pages/Career'));
+const AdminCareer = React.lazy(() => import('./pages/AdminCareer'));
+const NotFoundPage = React.lazy(() => import('./pages/NotFoundPage'));
 
 
 const App = () => {
@@ -28,6 +30,7 @@ const App = () => {
     <BrowserRouter>
     <ScrollRestore/>
 <StickyNavbar/>
+<Suspense fallback={<div>Loading...</div>}>
     <Routes>
     <Route
              
@@ -59,6 +62,7 @@ const App = () => {
           />
     
     </Routes>
+    </Suspense>
     <Footer/>
     </BrowserRouter>
     </>
