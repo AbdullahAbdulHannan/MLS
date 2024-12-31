@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Slider from '../components/Slides';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 function Home() {
   const slides = [
@@ -27,6 +28,15 @@ function Home() {
     return () => clearInterval(interval);
   }, [currentSlide, slides.length]);
   return (
+    <>
+    <Helmet>
+        <link rel="canonical" href="https://www.multinationallanguage.services/" />
+        <title>Home - Multinational Language Services</title>
+        <meta
+          name="description"
+          content="Providing professional translation and interpretation services globally."
+        />
+      </Helmet>
     <div className="font-sans">
       {/* Hero Section */}
       <section
@@ -142,6 +152,7 @@ function Home() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 

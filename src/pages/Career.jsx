@@ -4,6 +4,7 @@ import { OpenPositions } from '../components/career/OpenPositions'
 import { Benefits } from '../components/career/Benefits'
 import { CareerHero } from '../components/career/CareerHero'
 import { JoinProcess } from '../components/career/JoinProcess'
+import { Helmet } from 'react-helmet-async'
 
 const Career = () => {
   return (
