@@ -76,7 +76,7 @@ const Footer = () => {
               </li>
             </ul>
 
-            <div className=" text-2xl flex md:mt-10 text-white mb-3">
+            <div className=" text-2xl flex my-7 ms-14 text-white mb-3">
             <a href="https://www.facebook.com/share/152mbM8ppg/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
               <div className="md:me-10 me-3 hover:text-blue-800 hover:bg-white hover:border-white border rounded-full border-slate-500 bg-slate-500 p-3 ">
                 <BsFacebook />
