@@ -1,5 +1,5 @@
 import React from "react";
-import { BsFacebook,  BsTwitter } from "react-icons/bs";
+import { BsFacebook,  BsTwitterX } from "react-icons/bs";
 import { GrLinkedin } from "react-icons/gr";
 import { IoIosMail } from "react-icons/io";
 import { MdPhone } from "react-icons/md";
@@ -77,23 +77,23 @@ const Footer = () => {
             </ul>
 
             <div className=" text-2xl flex md:mt-10 text-white mb-3">
-            <a href="https://facebook.com/" target="_blank" aria-label="Facebook">
-              <div className="md:me-10 me-3 hover:text-blue-300 hover:bg-yellow-500 hover:border-black border rounded-full border-slate-500 bg-slate-500 p-3 ">
+            <a href="https://www.facebook.com/share/152mbM8ppg/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
+              <div className="md:me-10 me-3 hover:text-blue-800 hover:bg-white hover:border-white border rounded-full border-slate-500 bg-slate-500 p-3 ">
                 <BsFacebook />
               </div>
               </a>
               <a
-                href="https://linkedin.com/"
+                href="https://www.linkedin.com/company/multinational-language-services/"
                 target="_blank"
                aria-label="Linkedin"
               >
-                <div className="md:me-10 me-3 hover:text-blue-900 hover:bg-yellow-500 hover:border-black border rounded-full border-slate-500 bg-slate-500 p-3 ">
+                <div className="md:me-10 me-3 hover:text-blue-900 hover:bg-white hover:border-white border rounded-full border-slate-500 bg-slate-500 p-3 ">
                   <GrLinkedin />
                 </div>
               </a>
-              <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
-                <div className="md:me-10 me-3 hover:text-blue-500 hover:bg-yellow-500 hover:border-black border rounded-full border-slate-500 bg-slate-500 p-3 ">
-                  <BsTwitter />
+              <a href="https://x.com/services171781?s=11&t=FBwD9YDuHkTei23BlI4ycA" target="_blank" aria-label="Twitter">
+                <div className="md:me-10 me-3 hover:text-black hover:bg-white hover:border-white border rounded-full border-slate-500 bg-slate-500 p-3 ">
+                  <BsTwitterX />
                 </div>
               </a>
             </div>
@@ -101,7 +101,7 @@ const Footer = () => {
 
         </div>
         <div className="container mx-auto text-center sm:mt-4 px-4 text-white mb-5">
-          <p>&copy; 2024 MLS - Multinational Language Services | All Rights Reserved</p>
+          <p>&copy; {new Date().getFullYear()} MLS - Multinational Language Services | All Rights Reserved</p>
         </div>
       </footer>
     </>

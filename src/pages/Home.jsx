@@ -31,10 +31,11 @@ function Home() {
     <>
     <Helmet>
         <link rel="canonical" href="https://www.multinationallanguage.services/" />
-        <title>Home - Multinational Language Services</title>
+        <title>Multinational Language Services | Professional Interpretation Services</title>
+        <meta name="title" content="Multinational Language Services | Professional Interpretation Services"/>
         <meta
           name="description"
-          content="Providing professional translation and interpretation services globally."
+          content="Multinational Language Services provides professional translation and interpretation services globally."
         />
       </Helmet>
     <div className="font-sans">
